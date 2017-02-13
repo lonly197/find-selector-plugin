@@ -1,0 +1,36 @@
+{
+    "background": {
+        "persistent": true,
+        "scripts": ["background.js"]
+    },
+    "browser_action": {
+        "default_icon": "images/css_selector_icon_128.png",
+        "default_title": "Click to start"
+    },
+    "content_scripts": [{
+        "css": [],
+        "js": ["js/jquery.js", "js/jquery.hotkeys.js", "/js/jquery.hoverIntent.js", "/src/dom-selector.js", "/src/highlighter.js", "/src/jquery.ct.js", "/js/main.js"],
+        "matches": ["http://*/*", "https://*/*"]
+    }],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "description": "Find the unique selector for any element on page.",
+    "icons": {
+        "128": "images/css_selector_icon_128.png",
+        "16": "images/css_selector_icon_16.png",
+        "48": "images/css_selector_icon_48.png"
+    },
+    "manifest_version": 2,
+    "name": "Find jQuery Unique Selector",
+    "permissions": ["activeTab"],
+    "version": "0.0.1",
+    "author": "lonly",
+    "web_accessible_resources": ["**.css", "**.html", "**.js", "**.png", "**.gif", "**.map"],
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": { "default": "Ctrl+X" },
+            "description": "Stop to find the selector"
+        }
+    },
+    // defalut language
+    "default_locale": "zh_CN"
+}

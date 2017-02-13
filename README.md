@@ -1,0 +1,1 @@
+The Chrome Extension that uses the BeautyTips API. Enables Find the unique selector for any element on page.
